@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Press+Start+2P&family=Work+Sans:wght@300&display=swap');
+
+/* O Corpo do meu Jogo em CSS */
+body {
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: rgb(68, 68, 68); /* Define a cor de fundo */
+}
+
+main {
+    flex-grow: 1;
+}
+
+header {
+    background-color: rgb(0, 0, 0);
+    padding: 5px 40px;
+}
+
+.title > a {
+    padding: 5px 5px;
+    text-decoration: none;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* O CSS do Game */
+.game {
+    border: 3px solid rgb(100, 100, 100);
+    padding: 5px 5px;
+    height: auto; /* Altere a altura para se ajustar ao conteúdo */
+}
+
+.cell {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border: 1px solid #c4c4c4;
+}
+
+.alive {
+    background-color: #000000;
+}
+
+/* Os Controles do Game da Vida */
+footer {
+    background-color: rgb(68, 68, 68);
+    padding: 10px 5px;
+    height: auto; /* Altere a altura para se ajustar ao conteúdo */
+    text-align: center;
+}
+
+/* CSS dos Buttons */
+.button-1,
+.button-2,
+.button-3 {
+    padding: 13px 50px;
+    border-radius: 30px 30px;
+    font-size: 1.5em;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.button-1:hover,
+.button-2:hover,
+.button-3:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.buttons {
+    display: flex; /* Altere para flex para alinhar os botões horizontalmente */
+    justify-content: center; /* Centraliza horizontalmente os botões */
+    flex-wrap: wrap; /* Permite que os botões sejam quebrados em várias linhas em telas menores */
+    gap: 10px; /* Define um espaçamento entre os botões */
+}
+
+#board-container {
+    display: flex; /* Altere para flex para alinhar as células horizontalmente */
+    flex-wrap: wrap; /* Permite que as células sejam quebradas em várias linhas em telas menores */
+    gap: 1px; /* Define um espaçamento entre as células */
+    justify-content: center; /* Centraliza horizontalmente as células */
+    margin: 10px 0; /* Adicione margem para separar o tabuleiro dos botões */
+}
+
+@media (max-width: 600px) {
+/* Estilos adicionais para telas menores */
+.cell {
+    width: 10px;
+    height: 10px;
+}
+
+.button-1,
+.button-2,
+.button-3 {
+    padding: 8px 20px;
+    font-size: 1em;
+}
+}
